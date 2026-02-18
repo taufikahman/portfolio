@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taufik Ahman — Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400;1,9..40,700&family=Nanum+Pen+Script&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-black min-h-screen">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar">
+    <div class="flex items-center justify-between lg:justify-end max-w-[1280px] mx-auto w-full py-1.5 px-4 lg:px-6">
+      <!-- Hamburger (mobile/tablet only, hidden on lg+) -->
+      <button id="hamburger" class="hamburger lg:hidden" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <!-- Desktop nav (visible on lg+) -->
+      <div class="hidden lg:flex items-center gap-0">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#contact" class="nav-contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay (hidden on lg+) -->
+  <div id="mobile-menu" class="mobile-menu lg:hidden">
+    <a href="#home" class="nav-link mobile-nav-link">Home</a>
+    <a href="#skills" class="nav-link mobile-nav-link">Skills</a>
+    <a href="#projects" class="nav-link mobile-nav-link">Projects</a>
+    <a href="#journey" class="nav-link mobile-nav-link">Journey</a>
+    <a href="#contact" class="nav-contact mobile-nav-link">Contact</a>
+  </div>
+
+  <!-- ========== MAIN WRAPPER ========== -->
+  <div class="flex items-center justify-center w-full pt-24 md:pt-28 lg:pt-30">
+    <div class="flex flex-col items-center w-full max-w-[1280px]">
+
+      <!-- ========== HERO ========== -->
+      <section id="home" class="flex flex-col items-center justify-center gap-1 px-5 py-10 md:px-12 md:py-16 lg:px-20 lg:py-20 w-full animate-on-scroll">
+        <!-- Avatar -->
+        <div class="w-[100px] h-[100px] md:w-[140px] md:h-[140px] lg:w-[160px] lg:h-[160px] relative mb-3">
+          <img src="/images/avatar.svg" alt="Avatar" class="absolute inset-0 w-full h-full object-contain" />
+        </div>
+
+        <h2 class="hero-name w-full text-center">Hello. I'm Taufik Ahman</h2>
+
+        <div class="w-full max-w-[960px]">
+          <p class="text-body-bold gradient-text gradient-sky text-center md:text-left">
+            QA Engineer | Automation Specialist | AI-Assisted Testing Builder
+          </p>
+        </div>
+        
+        <div class="w-full max-w-[960px]">
+          <p class="text-caption text-white text-center md:text-left">
+            passionate about automation and intelligent testing. I design and build end-to-end automation frameworks using Playwright, Selenium, WebdriverIO, Appium, and k6, while also developing AI-assist QA systems and backend workflows with n8n.
+          </p>
+          <p class="text-ca text-white mt-3 text-center md:text-left">
+            I love building internal tools that improve developer workflows, accelerate releases, and ensure high product quality through smart, scalable automation.
+          </p>
+        </div>
+
+        <div class="w-full max-w-[960px] flex items-center pt-8 md:pt-12 relative">
+          <p class="text-quote gradient-text gradient-bless" style="font-size: 2.2em;">Lets Connect!!</p>
+          <div class="absolute left-1/2 -translate-x-1/2 top-8 md:top-12">
+            <img src="https://www.figma.com/api/mcp/asset/9b5aa729-017b-4fa3-93ac-f5b86c1d10be" alt="" class="w-[200px] md:w-[280px] lg:w-[320px] h-auto" />
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- ========== SKILLS ========== -->
+      <section id="skills" class="w-full px-6 animate-on-scroll">
+        <div class="flex items-center justify-center w-full" style="margin-top: 200px;">
+          <div class="stars-decoration">
+            <img src="https://www.figma.com/api/mcp/asset/00e6e3cc-7bf4-4066-8dd6-1422805de3d2" alt="" class="absolute left-[12px] top-0 w-[35px] md:w-[50px] lg:w-[60px] h-auto" />
+            <img src="https://www.figma.com/api/mcp/asset/a61f07bd-7325-4c45-8954-d6af67954c16" alt="" class="absolute left-[62px] md:left-[86px] lg:left-[105px] top-[32px] md:top-[45px] lg:top-[55px] w-[22px] md:w-[30px] lg:w-[36px] h-auto" />
+          </div>
+          <h2 class="text-title text-white text-center">Skills</h2>
+          <div class="stars-decoration"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-[28px] max-w-[1400px] mx-auto pb-10 md:pb-14 pt-4 px-2">
+
+          <!-- Card 1: Testing Methodologies -->
+          <div class="skill-card">
+            <div class="skill-card-icon-wrap">
+              <img src="https://www.figma.com/api/mcp/asset/b47167f8-c7e5-4a2c-8a62-057c2fa2db0e" alt="" class="skill-card-icon" />
+            </div>
+            <p class="skill-card-title">Testing Methodologies</p>
+            <div class="skill-card-tags">
+              <span class="skill-tag"><span class="skill-tag-text">Manual Testing</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Regression Testing</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Performance Testing</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Automated Testing</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">API Testing</span></span>
+            </div>
+          </div>
+
+          <!-- Card 2: Automation Testing -->
+          <div class="skill-card">
+            <div class="skill-card-icon-wrap">
+              <img src="https://www.figma.com/api/mcp/asset/323e461b-cec9-4be6-ad75-c0ec2f0cc206" alt="" class="skill-card-icon" />
+            </div>
+            <p class="skill-card-title">Automation Testing</p>
+            <div class="skill-card-tags">
+              <span class="skill-tag"><span class="skill-tag-text">WebdriverIO</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Playwright</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Katalon Studio</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Postman</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">REST Assured</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Appium</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Selenium</span></span>
+            </div>
+          </div>
+
+          <!-- Card 3: Bug Tracking & Management Tools -->
+          <div class="skill-card">
+            <div class="skill-card-icon-wrap">
+              <img src="https://www.figma.com/api/mcp/asset/b672b9d8-c7c5-4a69-8c82-64684de7f1c1" alt="" class="skill-card-icon" />
+            </div>
+            <p class="skill-card-title">Bug Tracking &amp; Management Tools</p>
+            <div class="skill-card-tags">
+              <span class="skill-tag"><span class="skill-tag-text">Jira</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Test Rail</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Zephyr</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Appium</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Click up</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Trello</span></span>
+            </div>
+          </div>
+
+          <!-- Card 4: Programming Language -->
+          <div class="skill-card">
+            <div class="skill-card-icon-wrap">
+              <img src="https://www.figma.com/api/mcp/asset/edc7e4e6-9110-4bd2-94c0-55359e5a4590" alt="" class="skill-card-icon" />
+            </div>
+            <p class="skill-card-title">Programming Language</p>
+            <div class="skill-card-tags">
+              <span class="skill-tag"><span class="skill-tag-text">Javascript</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Typescript</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">SQL</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">HTML / CSS</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Phyton</span></span>
+            </div>
+          </div>
+
+          <!-- Card 5: Low Code Tools -->
+          <div class="skill-card">
+            <div class="skill-card-icon-wrap">
+              <img src="https://www.figma.com/api/mcp/asset/da5e087d-a30d-40db-a3dd-41b54c7737ac" alt="" class="skill-card-icon" />
+            </div>
+            <p class="skill-card-title">Low Code Tools</p>
+            <div class="skill-card-tags">
+              <span class="skill-tag"><span class="skill-tag-text">n8n.io</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">MCP Playwright</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">lovable.dev</span></span>
+            </div>
+          </div>
+
+          <!-- Card 6: Devops & CI CD -->
+          <div class="skill-card">
+            <div class="skill-card-icon-wrap">
+              <img src="https://www.figma.com/api/mcp/asset/5cce7c8a-64ff-485e-a8ad-6270f4780d1a" alt="" class="skill-card-icon" />
+            </div>
+            <p class="skill-card-title">Devops &amp; CI CD</p>
+            <div class="skill-card-tags">
+              <span class="skill-tag"><span class="skill-tag-text">Jenkins</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Git Action</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Gradle</span></span>
+              <span class="skill-tag"><span class="skill-tag-text">Maven</span></span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========== MY JOURNEY ========== -->
+      <section id="journey" class="w-full relative px-4 animate-on-scroll">
+        <div class="flex items-center justify-center w-full">
+          <div class="stars-decoration"></div>
+          <h2 class="text-title text-white text-center">My journey</h2>
+          <div class="stars-decoration">
+            <img src="https://www.figma.com/api/mcp/asset/00e6e3cc-7bf4-4066-8dd6-1422805de3d2" alt="" class="absolute left-[12px] top-0 w-[35px] md:w-[50px] lg:w-[60px] h-auto" />
+            <img src="https://www.figma.com/api/mcp/asset/a61f07bd-7325-4c45-8954-d6af67954c16" alt="" class="absolute left-[62px] md:left-[86px] lg:left-[105px] top-[32px] md:top-[45px] lg:top-[55px] w-[22px] md:w-[30px] lg:w-[36px] h-auto" />
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center justify-center px-4 md:px-[6%] mt-6">
+          <div class="text-quote gradient-text gradient-sky text-center w-full md:w-[280px] lg:w-[300px]">
+            I started my career studying graphic design in 2006
+          </div>
+          <div class="w-[240px] md:w-[320px] lg:w-[380px] h-auto relative flex-shrink-0">
+            <img src="https://www.figma.com/api/mcp/asset/8dc83bd9-890c-4f22-9233-ba951807ed40" alt="" class="w-full h-auto object-contain" />
+          </div>
+          <div class="w-full md:w-[280px] lg:w-[300px]">
+            <p class="text-caption gradient-text gradient-sky text-center md:text-left">
+              The first time I really came into contact with design I was around five years old. Since I was little I liked to draw Ninja turtles on the wall.
+            </p>
+            <div class="mt-3 mx-auto md:ml-auto md:mr-0 w-[80px] lg:w-[100px]">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== TOKOPEDIA ========== -->
+      <section id="projects" class="section-journey-item w-full animate-on-scroll">
+        <div class="w-full md:w-[360px] lg:w-[480px] h-[300px] md:h-[380px] lg:h-[440px] overflow-hidden relative flex-shrink-0">
+          <div class="absolute inset-0 flex items-start justify-center pt-3">
+            <div class="w-[85%] max-w-[380px] h-[260px] md:h-[300px] lg:h-[340px] -rotate-[5deg] photo-card relative">
+              <img src="https://www.figma.com/api/mcp/asset/e83ba029-4d6e-421c-b2ce-d29c4dd93d64" alt="Tokopedia Tower" class="w-full h-[75%] object-cover rounded-t-[14px]" />
+              <p style="font-family: 'Nanum Pen Script', cursive;" class="text-center text-black text-[24px] md:text-[32px] uppercase leading-[28px] md:leading-[36px] py-1">Tokopedia tower - 2020</p>
+            </div>
+          </div>
+          <div class="absolute right-[20px] md:right-[40px] bottom-[30px] md:bottom-[50px]">
+            <img src="https://www.figma.com/api/mcp/asset/bef06bcb-685d-4b24-b7b6-ff2a33e1c7e7" alt="" class="w-[100px] md:w-[140px] lg:w-[160px] h-auto -scale-y-100 -rotate-[60deg]" />
+          </div>
+          <p class="text-quote gradient-text gradient-grape absolute right-[20px] md:right-[30px] bottom-[10px] text-center" style="font-size: 1.2em;">I'm there</p>
+        </div>
+        <div class="flex flex-col flex-1 gap-6 md:gap-8 lg:gap-10 min-w-0">
+          <div class="flex flex-col gap-1">
+            <h3 class="text-big-title gradient-text gradient-sky">Tokopedia</h3>
+            <p class="text-body-bold gradient-text gradient-sky">2019 -2022</p>
+          </div>
+          <div class="text-body-bold text-white">
+            <p>I started studying at the design school of Duoc UC in Santiago</p>
+            <p class="mt-3">In my early years, I explored different styles and met great designers.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 md:gap-6">
+            <div class="info-card flex-1">
+              <p class="text-caption text-white">I was very good at the interaction and web design courses</p>
+            </div>
+            <div class="info-card flex-1">
+              <p class="text-caption text-white">I really liked the power of design and illustration to tell stories</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== FIK CREATIVE ========== -->
+      <section class="w-full relative animate-on-scroll">
+        <div class="relative w-full h-[240px] md:h-[340px] lg:h-[400px] overflow-hidden px-4">
+          <div class="absolute left-[60%] md:left-[55%] top-[60%] hidden md:block">
+            <div class="w-[60px] md:w-[70px] h-[60px] md:h-[70px] rounded-full" style="background-image: linear-gradient(-90deg, rgb(169, 254, 129) 11.873%, rgb(166, 244, 230) 100%);">
+              <img src="https://www.figma.com/api/mcp/asset/2d6357a1-28d5-4157-ad98-203cfc7b95a2" alt="" class="w-full h-full object-contain p-2 rotate-[23deg]" />
+            </div>
+          </div>
+          <div class="absolute left-4 md:left-[10%] top-[40%] md:top-[50%] w-[80%] md:w-[380px] lg:w-[420px]">
+            <p class="text-quote gradient-text gradient-mint">At the same time I started a new freelance professional logo designer with my friend.</p>
+          </div>
+          <div class="absolute right-0 md:right-[5%] top-0 w-[200px] md:w-[360px] lg:w-[440px] h-auto hidden md:block">
+            <img src="https://www.figma.com/api/mcp/asset/0cc98890-16b9-4ca9-8df2-d053794e4ce5" alt="" class="w-full h-full object-contain" style="transform: rotate(163deg) scaleY(-1);" />
+          </div>
+        </div>
+
+        <div class="section-journey-item w-full">
+          <div class="flex flex-col flex-1 gap-6 md:gap-8 min-w-0">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-big-title gradient-text gradient-mint">FIK Creative</h3>
+              <p class="text-body-bold gradient-text gradient-mint">2020-2021</p>
+            </div>
+            <div class="text-body-bold text-white">
+              <p>I left my comfort zone and saw an opportunity to start my own project. It was a really good time.</p>
+              <p class="mt-3">I was lucky to work with <span class="gradient-text gradient-lima">@Arga</span>, one of the best designers I know and he was a great mentor and best friend.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 md:gap-6">
+              <div class="info-card flex-1">
+                <p class="text-caption text-white">Mediastram is one of the most important streaming companies in LATAM</p>
+              </div>
+              <div class="info-card flex-1">
+                <p class="text-caption text-white">I designed digital experiences for Platzi, Claro, Canal 13, TVN &amp; internal products.</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-[480px] h-[400px] md:h-[520px] lg:h-[600px] relative flex-shrink-0 mx-auto lg:mx-0" style="max-width: 480px;">
+            <div class="absolute top-[10px] left-[10%] w-[75%] max-w-[340px] h-[48%] -rotate-[6deg]">
+              <div class="photo-card w-full h-full overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/18a66316-0490-4db8-9b79-353430c97841" alt="" class="w-full h-[80%] object-cover" />
+                <p style="font-family: 'Nanum Pen Script', cursive;" class="text-center text-black text-[22px] md:text-[28px] uppercase leading-[24px] py-1">LOGO ASNET - 2021</p>
+              </div>
+            </div>
+            <div class="absolute top-[50%] left-[15%] w-[75%] max-w-[340px] h-[48%] rotate-6">
+              <div class="photo-card w-full h-full overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/c752039b-fb8e-426e-bb75-e6c7bb959306" alt="" class="w-full h-[80%] object-cover" />
+                <p style="font-family: 'Nanum Pen Script', cursive;" class="text-center text-black text-[22px] md:text-[28px] uppercase leading-[24px] py-1">LOGO SENGKED.COM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== GOAPOTIK ========== -->
+      <section class="w-full relative animate-on-scroll">
+        <div class="relative w-full h-[200px] md:h-[320px] lg:h-[400px] overflow-hidden px-4">
+          <div class="absolute left-[10%] md:left-[12%] top-[5%] w-[70%] md:w-[50%] max-w-[540px] h-auto hidden md:block">
+            <img src="https://www.figma.com/api/mcp/asset/7c0bd8d1-df93-4ebb-93df-67d904dfec19" alt="" class="w-full h-full object-contain" />
+          </div>
+          <div class="absolute right-4 md:right-[12%] top-[30%] md:top-[40%] w-[90%] md:w-[300px]">
+            <p class="text-quote gradient-text gradient-mint">I'm obsessed with QUALITY systems</p>
+          </div>
+        </div>
+
+        <div class="section-journey-item w-full">
+          <div class="flex flex-col flex-1 gap-6 md:gap-8 min-w-0">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-big-title gradient-text gradient-lima">Goapotik</h3>
+              <p class="text-body-bold gradient-text gradient-lima">2022 - Currently</p>
+            </div>
+            <div class="text-body-bold text-white">
+              <p>I worked in digital health tech marketplace for <span class="gradient-text gradient-lima">Goapotik</span> testing a <span class="gradient-text gradient-lima">Software App &amp; Web</span> for the bank's App and website.</p>
+              <p class="mt-3">Coordinating with multiple teams and considering the needs across a large organization was challenging but the end result was a huge improvement In the handoff process.</p>
+              <p class="mt-3">The best thing was the collaborative work with my QA teammates, <span class="gradient-text gradient-lima">@Shalna, @Nur @Benny</span> and <span class="gradient-text gradient-lima">@Christin</span></p>
+            </div>
+          </div>
+          <div class="w-full lg:w-[480px] h-[500px] md:h-[700px] lg:h-[860px] overflow-hidden relative flex-shrink-0 mx-auto lg:mx-0" style="max-width: 480px;">
+            <div class="absolute top-0 left-[5%] w-[45%] h-[28%] rotate-[11deg]">
+              <div class="photo-card-small w-full h-full overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/b4a4b231-89db-4ef1-a0a1-f51ce6001094" alt="" class="w-full h-[82%] object-cover" />
+                <p style="font-family: 'Nanum Pen Script', cursive;" class="text-center text-black text-[16px] md:text-[20px] uppercase leading-[20px] py-0.5">muchaches</p>
+              </div>
+            </div>
+            <div class="absolute top-0 left-[50%] w-[45%] h-[28%] -rotate-[6deg]">
+              <div class="photo-card-small w-full h-full overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/d58abc02-43e5-42e0-81e5-b96b9b5c7e4d" alt="" class="w-full h-[82%] object-cover" />
+                <p style="font-family: 'Nanum Pen Script', cursive;" class="text-center text-black text-[16px] md:text-[20px] uppercase leading-[20px] py-0.5">LOGO ASNET</p>
+              </div>
+            </div>
+            <div class="absolute top-[26%] left-[-3%] w-[100%] h-[34%]">
+              <img src="https://www.figma.com/api/mcp/asset/b10d8368-0310-426d-97db-e6ad5c663483" alt="" class="w-full h-full object-cover" />
+            </div>
+            <div class="absolute top-[52%] left-0 w-full h-[48%]">
+              <img src="https://www.figma.com/api/mcp/asset/aa084b15-3a79-4a91-8ae1-0413ac7c23fd" alt="" class="w-[110%] h-full object-contain rotate-[16deg]" />
+            </div>
+            <div class="postit bg-postit-blue absolute left-[28%] top-[58%]"><p>Design</p><p>system</p></div>
+            <div class="postit bg-postit-orange absolute right-[10%] top-[30%] rotate-6"><p>Agile</p></div>
+            <div class="postit bg-postit-pink absolute right-[4%] top-[38%] -rotate-[8deg]"><p>Design</p><p class="text-[16px]">Thinking</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== GRADUATED ========== -->
+      <section class="w-full relative animate-on-scroll">
+        <div class="relative w-full overflow-hidden px-4">
+          <div class="flex items-center justify-center md:justify-end px-4 md:px-[80px] py-6">
+            <div class="flex flex-col items-center gap-3">
+              <div class="w-[60px] h-[60px] md:w-[70px] md:h-[70px] relative">
+                <img src="https://www.figma.com/api/mcp/asset/f686c586-eb45-46c1-965c-9c8823f8bda9" alt="" class="w-[160px] md:w-[200px] h-auto absolute -left-[50px] md:-left-[65px] -top-[50px] md:-top-[65px] object-contain" />
+              </div>
+              <p class="text-quote gradient-text gradient-grape text-center w-[280px] md:w-[300px]">I'm improving my English skills</p>
+            </div>
+          </div>
+          <div class="flex items-start justify-center px-4 md:px-[40px]">
+            <div class="w-full max-w-[480px] h-[300px] md:h-[400px] lg:h-[440px] overflow-hidden relative flex-shrink-0">
+              <div class="absolute inset-0 flex items-start justify-center pt-3">
+                <div class="w-[85%] max-w-[380px] h-[75%] rotate-[3deg] photo-card relative">
+                  <img src="https://www.figma.com/api/mcp/asset/fc872b9e-d336-46bb-a314-06c007f37d55" alt="" class="w-full h-[78%] object-cover rounded-t-[14px]" />
+                  <p style="font-family: 'Nanum Pen Script', cursive;" class="text-center text-black text-[24px] md:text-[32px] uppercase leading-[28px] py-1">MaDA uc - 2019</p>
+                </div>
+              </div>
+              <div class="absolute left-[20px] md:left-[40px] bottom-[40px] md:bottom-[60px]">
+                <img src="https://www.figma.com/api/mcp/asset/4d02b0bf-1e09-41a9-9321-4cb44c093306" alt="" class="w-[120px] md:w-[180px] h-auto -scale-y-100 -rotate-[60deg]" />
+              </div>
+              <p class="text-quote gradient-text gradient-grape absolute left-[80px] md:left-[120px] bottom-[10px] text-center w-[200px] md:w-[250px]" style="font-size: 1.1em;">Start a Master of Design</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-journey-item w-full">
+          <div class="flex flex-col flex-1 gap-6 md:gap-8 min-w-0">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-big-title gradient-text gradient-grape">Graduated</h3>
+              <p class="text-body-bold gradient-text gradient-grape">Bachelor's Degree</p>
+              <p class="text-body-bold gradient-text gradient-grape">2020 - 2025</p>
+            </div>
+            <div class="text-body-bold text-white">
+              <p>I'm working and stuying together at the same time, finally i'm finished the major in <span class="gradient-text gradient-grape">System Information at Budi Luhur University</span></p>
+              <p class="mt-3">Thank you for my parents, my bestfriend at campus always supported me and I was lucky to meet with <span class="gradient-text gradient-grape">@Zahra</span>, my partners I know and she was a great and smart</p>
+            </div>
+          </div>
+          <div class="w-full lg:w-[480px] h-[400px] md:h-[520px] lg:h-[600px] relative flex-shrink-0 mx-auto lg:mx-0" style="max-width: 480px;">
+            <div class="absolute top-[10px] left-[10%] w-[75%] max-w-[340px] h-[48%] -rotate-[6deg]">
+              <div class="photo-card w-full h-full overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/18a66316-0490-4db8-9b79-353430c97841" alt="" class="w-full h-[80%] object-cover" />
+                <p style="font-family: 'Nanum Pen Script', cursive;" class="text-center text-black text-[22px] md:text-[28px] uppercase leading-[24px] py-1">LOGO ASNET - 2021</p>
+              </div>
+            </div>
+            <div class="absolute top-[50%] left-[15%] w-[75%] max-w-[340px] h-[48%] rotate-6">
+              <div class="photo-card w-full h-full overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/c752039b-fb8e-426e-bb75-e6c7bb959306" alt="" class="w-full h-[80%] object-cover" />
+                <p style="font-family: 'Nanum Pen Script', cursive;" class="text-center text-black text-[22px] md:text-[28px] uppercase leading-[24px] py-1">LOGO SENGKED.COM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== TODAY ========== -->
+      <section class="flex items-center justify-center px-5 py-10 md:px-12 md:py-16 lg:px-16 w-full animate-on-scroll">
+        <div class="flex flex-col lg:flex-row gap-8 md:gap-10 lg:gap-[50px] items-center justify-center w-full">
+          <div class="flex flex-col gap-6 md:gap-8 items-center w-full lg:w-[440px]">
+            <div class="w-full">
+              <h3 class="text-big-title gradient-text gradient-grape">Today</h3>
+            </div>
+            <p class="text-body-bold text-white w-full">
+              I want to workly automation testing projects remotely and move to slow living city at south of Pekalongan with my girlfriend Mari
+            </p>
+            <div class="w-full max-w-[480px] h-[220px] md:h-[280px] bg-black relative overflow-hidden">
+              <div class="absolute left-[6%] top-[24%] w-[30%] h-[65%] -rotate-[5deg]">
+                <div class="photo-card-small w-full h-full overflow-hidden">
+                  <img src="https://www.figma.com/api/mcp/asset/36cdcfe1-faba-47d5-a2f4-0f3240b3ad1b" alt="" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="absolute left-[30%] top-[12%] w-[32%] h-[70%] rotate-[3deg]">
+                <div class="photo-card-small w-full h-full overflow-hidden">
+                  <img src="https://www.figma.com/api/mcp/asset/37839fe1-0034-4b5f-a2d5-5c6cd99c701c" alt="" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="absolute left-[56%] top-[25%] w-[30%] h-[65%] rotate-[7deg]">
+                <div class="photo-card-small w-full h-full overflow-hidden">
+                  <img src="https://www.figma.com/api/mcp/asset/0fc976de-b11b-48a3-a4fc-b4e7282cda50" alt="" class="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div class="absolute right-[-10px] top-[5px] w-[100px] md:w-[140px] h-auto rotate-[11deg]">
+                <img src="https://www.figma.com/api/mcp/asset/00e6e3cc-7bf4-4066-8dd6-1422805de3d2" alt="" class="absolute left-[12px] top-0 w-[34px] md:w-[48px] h-auto" />
+                <img src="https://www.figma.com/api/mcp/asset/a61f07bd-7325-4c45-8954-d6af67954c16" alt="" class="absolute left-[62px] md:left-[86px] top-[32px] md:top-[45px] w-[22px] md:w-[28px] h-auto" />
+              </div>
+            </div>
+          </div>
+          <div class="w-full max-w-[380px] lg:w-[380px] h-[500px] md:h-[640px] lg:h-[720px] bg-black relative overflow-hidden mx-auto">
+            <div class="absolute left-0 top-[8%] w-[78%] h-[48%] -rotate-[4deg]">
+              <div class="photo-card w-full h-full overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/7ba34d36-5776-4133-ab70-3eb65b10ae1b" alt="" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="absolute left-[30%] top-[50%] w-[65%] h-[44%] rotate-[4deg]">
+              <div class="photo-card w-full h-full overflow-hidden">
+                <img src="https://www.figma.com/api/mcp/asset/5458c8e2-2860-406a-9972-03e1e88baee8" alt="" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="absolute right-[-10px] top-[5px] w-[100px] md:w-[140px] h-[140px] md:h-[170px] rotate-[11deg]">
+              <img src="https://www.figma.com/api/mcp/asset/00e6e3cc-7bf4-4066-8dd6-1422805de3d2" alt="" class="absolute left-[12px] top-0 w-[34px] md:w-[48px] h-auto" />
+              <img src="https://www.figma.com/api/mcp/asset/a61f07bd-7325-4c45-8954-d6af67954c16" alt="" class="absolute left-[62px] md:left-[86px] top-[32px] md:top-[45px] w-[22px] md:w-[28px] h-auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== FOOTER / CONTACT ========== -->
+      <section id="contact" class="flex flex-col items-center gap-6 md:gap-8 w-full px-4 pb-12 md:pb-16 animate-on-scroll">
+        <div class="w-full max-w-[600px] md:max-w-[700px] lg:max-w-[800px] relative">
+          <img src="https://www.figma.com/api/mcp/asset/d6f27103-f70f-4836-b93d-21584289f71c" alt="" class="w-full h-auto object-contain" />
+        </div>
+        <div class="flex flex-col sm:flex-row items-start justify-center w-full max-w-[960px]">
+          <div class="flex flex-col flex-1 items-center justify-center gap-6 p-6 md:p-8">
+            <div class="p-6 md:p-8">
+              <img src="https://www.figma.com/api/mcp/asset/aece3af0-184a-4430-a426-d242683e7cd2" alt="LinkedIn" class="w-[36px] h-[36px] md:w-[44px] md:h-[44px]" />
+            </div>
+            <p class="text-body-bold text-white text-center">
+              You can contact me on
+              <a href="https://www.linkedin.com/in/taufik-ahman" class="gradient-link gradient-text gradient-mint underline" target="_blank" rel="noopener noreferrer">linkedin</a>
+            </p>
+          </div>
+          <div class="flex flex-col flex-1 items-center justify-center gap-6 p-6 md:p-8">
+            <div class="p-6 md:p-8">
+              <img src="https://www.figma.com/api/mcp/asset/f7b84c0a-b575-4da9-807a-21eac6e9e212" alt="GitHub" class="w-[36px] h-[36px] md:w-[44px] md:h-[44px]" />
+            </div>
+            <p class="text-body-bold text-white text-center">
+              You can see some projects in
+              <a href="https://github.com/taufikahman" class="gradient-link gradient-text gradient-grape underline" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
+          </div>
+          <div class="flex flex-col flex-1 items-center justify-center gap-6 p-6 md:p-8">
+            <div class="p-6 md:p-8">
+              <img src="public/images/Instagram_logo.webp" alt="GitHub" class="w-[36px] h-[36px] md:w-[44px] md:h-[44px]" />
+            </div>
+            <p class="text-body-bold text-white text-center">
+              You can see some projects in
+              <a href="https://instagram.com/ahman.tf" class="gradient-link gradient-text gradient-grape underline" target="_blank" rel="noopener noreferrer">Insta</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
