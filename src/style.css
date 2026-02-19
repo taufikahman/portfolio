@@ -110,8 +110,8 @@ body {
 .hero-name {
   font-family: var(--font-space-mono);
   font-weight: 700;
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 22px;
+  line-height: 30px;
   text-align: center;
   background-image: var(--gradient-grape);
   -webkit-background-clip: text;
@@ -127,7 +127,7 @@ body {
   .text-button { font-size: 20px; line-height: 28px; }
   .text-caption { font-size: 16px; line-height: 28px; }
   .text-quote { font-size: 32px; line-height: 36px; }
-  .hero-name { font-size: 48px; line-height: 60px; }
+  .hero-name { font-size: 38px; line-height: 48px; }
 }
 
 /* Desktop (lg: 1024px+) */
@@ -138,14 +138,14 @@ body {
   .text-button { font-size: 22px; line-height: 30px; }
   .text-caption { font-size: 18px; line-height: 32px; }
   .text-quote { font-size: 36px; line-height: 40px; }
-  .hero-name { font-size: 60px; line-height: 76px; }
+  .hero-name { font-size: 48px; line-height: 60px; }
 }
 
 /* Large Desktop (xl: 1280px+) */
 @media (min-width: 1280px) {
   .text-big-title { font-size: 72px; line-height: 88px; }
   .text-body-bold { font-size: 30px; line-height: 46px; }
-  .hero-name { font-size: 66px; line-height: 84px; }
+  .hero-name { font-size: 54px; line-height: 68px; }
 }
 
 /* ============================================
