@@ -68,4 +68,110 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = ''
     }
   })
+
+  // Sound toggle with 3-click sequence
+  const soundToggle = document.getElementById('sound-toggle')
+  const iconOn = document.getElementById('sound-icon-on')
+  const iconOff = document.getElementById('sound-icon-off')
+  const bgMusic = document.getElementById('bg-music')
+  bgMusic.volume = 0.4
+
+  let isPlaying = false
+  let isAnimating = false
+  let clickStage = 0
+
+  const GESTURE_EVENTS = ['click', 'scroll', 'keydown', 'keyup', 'touchstart', 'touchend', 'mousedown', 'mouseup', 'mousemove', 'pointerdown', 'wheel']
+
+  function markPlaying() {
+    isPlaying = true
+    localStorage.setItem('music-playing', '1')
+    soundToggle.classList.add('playing')
+    iconOff.classList.add('hidden')
+    iconOn.classList.remove('hidden')
+  }
+
+  function markStopped() {
+    isPlaying = false
+    localStorage.setItem('music-playing', '0')
+    soundToggle.classList.remove('playing')
+    iconOn.classList.add('hidden')
+    iconOff.classList.remove('hidden')
+  }
+
+  function startOnGesture() {
+    if (isPlaying) return
+    bgMusic.play().then(() => {
+      markPlaying()
+      GESTURE_EVENTS.forEach(ev => document.removeEventListener(ev, startOnGesture))
+    }).catch(() => {})
+  }
+
+  function attemptAutoplay() {
+    bgMusic.play().then(() => {
+      markPlaying()
+    }).catch(() => {
+      GESTURE_EVENTS.forEach(ev => document.addEventListener(ev, startOnGesture))
+    })
+  }
+
+  // If music was playing before reload, try to resume immediately
+  if (localStorage.getItem('music-playing') === '1') {
+    attemptAutoplay()
+  } else {
+    // First visit — start on any interaction
+    GESTURE_EVENTS.forEach(ev => document.addEventListener(ev, startOnGesture))
+  }
+
+  function clearPositions() {
+    soundToggle.classList.remove('pos-top-right', 'pos-top-left', 'pos-bottom-right')
+  }
+
+  function toggleSound() {
+    if (isPlaying) {
+      bgMusic.pause()
+      markStopped()
+    } else {
+      bgMusic.play()
+      markPlaying()
+    }
+  }
+
+  soundToggle.addEventListener('click', () => {
+    if (isAnimating) return
+
+    clickStage++
+
+    if (clickStage === 1) {
+      isAnimating = true
+      soundToggle.classList.add('shaking')
+      soundToggle.addEventListener('animationend', () => {
+        soundToggle.classList.remove('shaking')
+        clearPositions()
+        soundToggle.classList.add('pos-top-right')
+        isAnimating = false
+      }, { once: true })
+
+    } else if (clickStage === 2) {
+      isAnimating = true
+      soundToggle.classList.add('shaking')
+      soundToggle.addEventListener('animationend', () => {
+        soundToggle.classList.remove('shaking')
+        clearPositions()
+        soundToggle.classList.add('pos-top-left')
+        isAnimating = false
+      }, { once: true })
+
+    } else {
+      isAnimating = true
+      soundToggle.classList.add('shaking')
+      soundToggle.addEventListener('animationend', () => {
+        soundToggle.classList.remove('shaking')
+        clearPositions()
+        soundToggle.classList.add('pos-bottom-right')
+        toggleSound()
+        clickStage = 0
+        isAnimating = false
+      }, { once: true })
+    }
+  })
 })
